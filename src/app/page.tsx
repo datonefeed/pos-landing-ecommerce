@@ -16,7 +16,7 @@ export default function Home() {
         your Next.js app!
       </p>
 
-      <button className="bg-white text-purple-700 font-semibold px-6 py-2 rounded-full shadow hover:bg-purple-100 transition">
+      <button className="bg-white text-purple-600 font-semibold px-6 py-2 rounded-full shadow hover:bg-purple-100 transition">
         Click Me
       </button>
     </div>
