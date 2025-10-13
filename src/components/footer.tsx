@@ -36,11 +36,13 @@ export function Footer() {
               viewport={{ once: true }}
               className="flex items-center gap-2 mb-4"
             >
-              <img
-                src="images/LOGO_SVG_1POS_WHITE.svg"
-                alt={t("company.logoAlt")}
-                className="h-10"
-              />
+              <a href="#">
+                <img
+                  src="images/LOGO_SVG_1POS_WHITE.svg"
+                  alt={t("company.logoAlt")}
+                  className="h-10"
+                />
+              </a>
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
