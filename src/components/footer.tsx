@@ -4,28 +4,11 @@ import { Facebook, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
-  const footerLinks = {
-    product: [
-      { label: "Tính năng", href: "#features" },
-      { label: "Bảng giá", href: "#pricing" },
-      { label: "Tải ứng dụng", href: "#" },
-      { label: "API", href: "#" },
-    ],
-    company: [
-      { label: "Về chúng tôi", href: "#" },
-      { label: "Tin tức", href: "#news" },
-      { label: "Tuyển dụng", href: "#" },
-      { label: "Liên hệ", href: "#" },
-    ],
-    support: [
-      { label: "Trung tâm trợ giúp", href: "#" },
-      { label: "Hướng dẫn sử dụng", href: "#" },
-      { label: "Điều khoản dịch vụ", href: "#" },
-      { label: "Chính sách bảo mật", href: "#" },
-    ],
-  };
+  const t = useTranslations("Footer");
+  const footerLinks = t.raw("links");
 
   return (
     <motion.footer
@@ -53,7 +36,11 @@ export function Footer() {
               viewport={{ once: true }}
               className="flex items-center gap-2 mb-4"
             >
-              <img src="images/LOGO_SVG_1POS_WHITE.svg" alt="1POS Logo" className="h-10" />
+              <img
+                src="images/LOGO_SVG_1POS_WHITE.svg"
+                alt={t("company.logoAlt")}
+                className="h-10"
+              />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -62,8 +49,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="text-slate-300 mb-6 leading-relaxed"
             >
-              Giải pháp quản lý bán hàng toàn diện cho doanh nghiệp Việt Nam. Được phát triển bởi
-              MobiFone với công nghệ hiện đại.
+              {t("company.description")}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -74,15 +60,15 @@ export function Footer() {
             >
               <div className="flex items-start gap-3 text-sm text-slate-300">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>Tầng 6, Tòa nhà MobiFone, 1 Phạm Văn Bạch, Yên Hòa, Cầu Giấy, Hà Nội</span>
+                <span>{t("company.address")}</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-slate-300">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>1900 1234</span>
+                <span>{t("company.phone")}</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-slate-300">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <span>support@1pos.vn</span>
+                <span>{t("company.email")}</span>
               </div>
             </motion.div>
           </motion.div>
@@ -94,9 +80,9 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-lg mb-4">Sản phẩm</h3>
+            <h3 className="font-semibold text-lg mb-4">{t("links.product.title")}</h3>
             <ul className="space-y-3">
-              {footerLinks.product.map((link, index) => (
+              {footerLinks.product.items.map((link, index) => (
                 <motion.li
                   key={link.label}
                   initial={{ opacity: 0, x: -20 }}
@@ -122,9 +108,9 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-lg mb-4">Công ty</h3>
+            <h3 className="font-semibold text-lg mb-4">{t("links.company.title")}</h3>
             <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
+              {footerLinks.company.items.map((link, index) => (
                 <motion.li
                   key={link.label}
                   initial={{ opacity: 0, x: -20 }}
@@ -150,9 +136,9 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-lg mb-4">Hỗ trợ</h3>
+            <h3 className="font-semibold text-lg mb-4">{t("links.support.title")}</h3>
             <ul className="space-y-3">
-              {footerLinks.support.map((link, index) => (
+              {footerLinks.support.items.map((link, index) => (
                 <motion.li
                   key={link.label}
                   initial={{ opacity: 0, x: -20 }}
@@ -188,7 +174,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="font-semibold text-lg mb-3"
             >
-              Đăng ký nhận tin
+              {t("newsletter.title")}
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, x: -30 }}
@@ -197,7 +183,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="text-sm text-slate-300 mb-4"
             >
-              Nhận thông tin mới nhất về sản phẩm và ưu đãi đặc biệt
+              {t("newsletter.description")}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -208,10 +194,12 @@ export function Footer() {
             >
               <Input
                 type="email"
-                placeholder="Email của bạn"
+                placeholder={t("newsletter.emailPlaceholder")}
                 className="bg-gray-50 border-slate-700 text-white placeholder:text-slate-400"
               />
-              <Button className="bg-primary border-2 hover:bg-primary/90">Đăng ký</Button>
+              <Button className="bg-primary border-2 hover:bg-primary/90">
+                {t("newsletter.subscribe")}
+              </Button>
             </motion.div>
           </div>
         </motion.div>
@@ -231,7 +219,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-sm text-slate-400"
           >
-            © 2025 1POS by MobiFone. All rights reserved.
+            {t("bottom.copyright")}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -245,7 +233,7 @@ export function Footer() {
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
               className="text-slate-400 hover:text-white transition-colors"
-              aria-label="Facebook"
+              aria-label={t("bottom.social.facebook")}
             >
               <Facebook className="w-5 h-5" />
             </motion.a>
@@ -254,7 +242,7 @@ export function Footer() {
               whileHover={{ scale: 1.2, rotate: -5 }}
               whileTap={{ scale: 0.9 }}
               className="text-slate-400 hover:text-white transition-colors"
-              aria-label="YouTube"
+              aria-label={t("bottom.social.youtube")}
             >
               <Youtube className="w-5 h-5" />
             </motion.a>
@@ -263,7 +251,7 @@ export function Footer() {
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
               className="text-slate-400 hover:text-white transition-colors"
-              aria-label="LinkedIn"
+              aria-label={t("bottom.social.linkedin")}
             >
               <Linkedin className="w-5 h-5" />
             </motion.a>

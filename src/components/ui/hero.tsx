@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Hero2 = () => {
+  const t = useTranslations("HeroSection");
+
   return (
     <div className="relative py-28 min-h-screen overflow-hidden bg-primary">
       {/* Gradient background with grain effect */}
@@ -40,7 +43,7 @@ const Hero2 = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mx-auto max-w-4xl text-5xl font-bold text-white md:text-6xl lg:text-7xl"
         >
-          Giải pháp Quản lý bán hàng toàn diện
+          {t("content.title")}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -48,8 +51,7 @@ const Hero2 = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-2xl text-lg text-gray-300"
         >
-          MobiFone cung cấp giải pháp tiện lợi, toàn diện giúp bạn quản lý dễ dàng, bán hàng hiệu
-          quả hơn với 1POS.
+          {t("content.description")}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -62,14 +64,14 @@ const Hero2 = () => {
             whileTap={{ scale: 0.95 }}
             className="h-12 rounded-full bg-white px-8 text-base font-medium text-black hover:bg-white/90"
           >
-            Đăng ký dung thử miễn phí
+            {t("cta.freeTrial")}
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="h-12 rounded-full border border-white px-8 text-base font-medium text-white hover:bg-white/10"
           >
-            Xem video giới thiệu
+            {t("cta.watchVideo")}
           </motion.button>
         </motion.div>
 
@@ -92,7 +94,7 @@ const Hero2 = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}
             src="/images/hero-infor.png"
-            alt="Hero Image"
+            alt={t("image.alt")}
             className="relative w-full h-auto shadow-md grayscale-100 rounded-lg"
           />
         </motion.div>

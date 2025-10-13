@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion";
 import { VideoPlayer } from "./ui/video-thumbnail-player";
+import { useTranslations } from "next-intl";
 
 export function ProductShowcase() {
+  const t = useTranslations("ProductShowcase");
+
   return (
-    <section className="py-20 bg-[url('/images/backgroud/product-showcase_bg.svg')] text-white overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-white overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,11 +17,8 @@ export function ProductShowcase() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">VÌ SAO CHỌN 1POS MOBIFONE</h2>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
-            Giải pháp quản lý bán hàng toàn diện với công nghệ hiện đại, giúp doanh nghiệp tối ưu
-            hóa quy trình kinh doanh và gia tăng doanh thu
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("content.title")}</h2>
+          <p className="text-lg text-blue-100 max-w-3xl mx-auto">{t("content.description")}</p>
         </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
@@ -55,15 +55,13 @@ export function ProductShowcase() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            {/* <div className="w-full max-w-2xl mx-auto p-4"> */}
             <VideoPlayer
               thumbnailUrl="/images/1pos-thumbnail_10.jpg"
               videoUrl="https://www.youtube.com/embed/u_GVCK9h8Sg?si=CqgTyg2Cx-YAglGn"
-              title="MobiFone 1POS"
-              description="Giải pháp quản lý bán hàng toàn diện"
+              title={t("video.title")}
+              description={t("video.description")}
               className="rounded-xl"
             />
-            {/* </div> */}
           </motion.div>
         </div>
       </div>

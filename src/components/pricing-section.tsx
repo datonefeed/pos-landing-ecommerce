@@ -3,55 +3,11 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function PricingSection() {
-  const plans = [
-    {
-      name: "1POS",
-      subtitle: "Gói phần mềm quản lý bán hàng cơ bản",
-      price: "4.140.000",
-      originalPrice: "3.600.000",
-      period: "VNĐ/năm",
-      features: [
-        "Quản lý bán hàng cơ bản",
-        "Quản lý kho hàng",
-        "Báo cáo doanh thu",
-        "Hỗ trợ 24/7",
-        "1 chi nhánh",
-      ],
-      highlighted: false,
-    },
-    {
-      name: "1POS",
-      subtitle: "Gói phần mềm quản lý bán hàng nâng cao",
-      price: "720.000",
-      originalPrice: "660.000",
-      period: "VNĐ/tháng",
-      features: [
-        "Tất cả tính năng gói cơ bản",
-        "Quản lý nhân viên",
-        "Quản lý khách hàng",
-        "Tích hợp đa kênh",
-        "Không giới hạn chi nhánh",
-      ],
-      highlighted: true,
-    },
-    {
-      name: "1POS",
-      subtitle: "Gói phần mềm quản lý bán hàng chuyên nghiệp",
-      price: "1.296.000",
-      originalPrice: "1.176.000",
-      period: "VNĐ/tháng",
-      features: [
-        "Tất cả tính năng gói nâng cao",
-        "API tích hợp",
-        "Tùy chỉnh giao diện",
-        "Đào tạo chuyên sâu",
-        "Hỗ trợ ưu tiên",
-      ],
-      highlighted: false,
-    },
-  ];
+  const t = useTranslations("PricingSection");
+  const plans = t.raw("plans");
 
   return (
     <section id="pricing" className="py-20 bg-white">
@@ -63,7 +19,7 @@ export function PricingSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">MỌI DOANH NGHIỆP</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">{t("content.title")}</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -83,7 +39,7 @@ export function PricingSection() {
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-primary px-4 py-1 rounded-full text-sm font-semibold">
-                  Phổ biến nhất
+                  {t("highlight.mostPopular")}
                 </div>
               )}
 
@@ -140,7 +96,7 @@ export function PricingSection() {
                     : "bg-primary text-white hover:bg-primary/80"
                 }`}
               >
-                Đăng ký ngay
+                {t("cta.signUpNow")}
               </Button>
             </motion.div>
           ))}

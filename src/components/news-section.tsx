@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export function NewsSection() {
+  const t = useTranslations("NewsSection");
+
   const articles = [
     {
       title: "Hướng dẫn sử dụng 1POS cho người mới bắt đầu",
@@ -37,7 +40,7 @@ export function NewsSection() {
           className="text-center mb-16"
         >
           <h2 className="w-full text-3xl md:text-4xl font-bold text-foreground">
-            TIN TỨC MỚI NHẤT CỦA 1POS
+            {t("content.title")}
           </h2>
         </motion.div>
 
@@ -69,7 +72,7 @@ export function NewsSection() {
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{article.excerpt}</p>
                 <Button variant="link" className="p-0 h-auto text-primary">
-                  Đọc thêm
+                  {t("cta.readMore")}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>

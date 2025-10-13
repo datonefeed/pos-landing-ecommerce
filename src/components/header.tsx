@@ -5,18 +5,21 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function Header() {
+  const t = useTranslations("Header");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
-    { label: "Tính năng", href: "#features" },
-    { label: "Bảng giá", href: "#pricing" },
-    { label: "Giải pháp", href: "#solutions" },
-    { label: "Liên hệ", href: "#support" },
-    { label: "Tin tức", href: "#news" },
-    { label: "Về chúng tôi", href: "#footer" },
+    { label: t("nav.features"), href: "#features" },
+    { label: t("nav.pricing"), href: "#pricing" },
+    { label: t("nav.solutions"), href: "#solutions" },
+    { label: t("nav.support"), href: "#support" },
+    { label: t("nav.news"), href: "#news" },
+    { label: t("nav.aboutUs"), href: "#footer" },
   ];
 
   useEffect(() => {
@@ -30,7 +33,7 @@ export function Header() {
 
   return (
     <>
-      {/* init Header*/}
+      {/* init Header */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -41,7 +44,12 @@ export function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
-              <Image src="images/LOGO_SVG_1POS_WHITE.svg" height="90" width="120" alt="1POS Logo" />
+              <Image
+                src="images/LOGO_SVG_1POS_WHITE.svg"
+                height="90"
+                width="120"
+                alt={t("logo.alt")}
+              />
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -59,18 +67,19 @@ export function Header() {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center gap-3 text-white">
+              <LanguageSwitcher />
               <Button variant="ghost" size="sm" className="rounded-full hover:text-primary">
-                Đăng ký
+                {t("cta.signUp")}
               </Button>
               <Button size="sm" className="bg-white hover:bg-gray-100 text-primary rounded-full">
-                Đăng nhập
+                {t("cta.signIn")}
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2  text-white"
+              className="lg:hidden p-2 text-white"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -98,11 +107,12 @@ export function Header() {
                   </a>
                 ))}
                 <div className="flex flex-col gap-2 pt-4 border-t border-border">
+                  <LanguageSwitcher />
                   <Button variant="ghost" size="sm" className="rounded-full">
-                    Đăng ký
+                    {t("cta.signUp")}
                   </Button>
                   <Button size="sm" className="bg-primary hover:bg-primary/90 rounded-full">
-                    Đăng nhập
+                    {t("cta.signIn")}
                   </Button>
                 </div>
               </nav>
@@ -129,7 +139,7 @@ export function Header() {
                     src="/images/LOGO_SVG_1POS_BLUE.svg"
                     height="90"
                     width="120"
-                    alt="1POS Logo"
+                    alt={t("logo.alt")}
                   />
                 </motion.div>
 
@@ -148,11 +158,12 @@ export function Header() {
 
                 {/* CTA Buttons */}
                 <div className="hidden md:flex items-center gap-3">
+                  <LanguageSwitcher />
                   <Button variant="ghost" size="sm" className="rounded-full">
-                    Đăng ký
+                    {t("cta.signUp")}
                   </Button>
                   <Button size="sm" className="bg-primary hover:bg-primary/90 rounded-full">
-                    Đăng nhập
+                    {t("cta.signIn")}
                   </Button>
                 </div>
 
@@ -187,11 +198,12 @@ export function Header() {
                       </a>
                     ))}
                     <div className="flex flex-col gap-2 pt-4 border-t border-border">
+                      <LanguageSwitcher />
                       <Button variant="ghost" size="sm" className="rounded-full">
-                        Đăng ký
+                        {t("cta.signUp")}
                       </Button>
                       <Button size="sm" className="bg-primary hover:bg-primary/90 rounded-full">
-                        Đăng nhập
+                        {t("cta.signIn")}
                       </Button>
                     </div>
                   </nav>

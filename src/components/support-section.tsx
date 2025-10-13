@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { LandingAccordionItem } from "./ui/interactive-image-accordion";
+import { useTranslations } from "next-intl";
 
 export function SupportSection() {
+  const t = useTranslations("SupportSection");
   return (
     <section id="support" className="py-20">
       <div className="container px-4  max-w-7xl mx-auto">
@@ -14,9 +16,11 @@ export function SupportSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">HỖ TRỢ KHÁCH HÀNG</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {t("content.title")}
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto whitespace-nowrap">
-            Chúng tôi luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi với đội ngũ chuyên nghiệp và tận tâm
+            {t("content.description")}
           </p>
         </motion.div>
 
