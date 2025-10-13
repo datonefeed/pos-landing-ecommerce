@@ -1,24 +1,28 @@
-import Image from "next/image";
+import { HeroSection } from "@/components/hero-section";
+import { FeaturesSection } from "@/components/features-section";
+import { PricingSection } from "@/components/pricing-section";
+import { ProductShowcase } from "@/components/product-showcase";
+import { SupportSection } from "@/components/support-section";
+import { TestimonialsSection } from "@/components/testimonials-section";
+import { NewsSection } from "@/components/news-section";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { PageLoader } from "@/components/page-loader";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center text-white">
-      <Image
-        src="https://nextjs.org/icons/next.svg"
-        alt="Next.js logo"
-        width={120}
-        height={30}
-        className="dark:invert mb-6"
-      />
-      <h1 className="text-4xl font-bold mb-2">Tailwind CSS is working 🎉</h1>
-      <p className="text-lg mb-6 text-center max-w-md">
-        If you can see this colorful background and white text, Tailwind is configured correctly in
-        your Next.js app!
-      </p>
-
-      <button className="bg-white text-purple-600 font-semibold px-6 py-2 rounded-full shadow hover:bg-purple-100 transition">
-        Click Me
-      </button>
-    </div>
+    <PageLoader>
+      <main className="min-h-screen">
+        <Header />
+        <HeroSection />
+        <FeaturesSection />
+        <PricingSection />
+        <ProductShowcase />
+        <SupportSection />
+        <TestimonialsSection />
+        <NewsSection />
+        <Footer />
+      </main>
+    </PageLoader>
   );
 }
