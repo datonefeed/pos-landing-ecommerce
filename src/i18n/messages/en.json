@@ -1,0 +1,237 @@
+{
+  "Header": {
+    "nav": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "solutions": "Solutions",
+      "support": "Contact",
+      "news": "News",
+      "aboutUs": "About Us"
+    },
+    "cta": {
+      "signUp": "Sign Up",
+      "signIn": "Sign In"
+    },
+    "logo": {
+      "alt": "1POS Logo"
+    }
+  },
+  "HeroSection": {
+    "content": {
+      "title": "Comprehensive Sales Management Solution",
+      "description": "MobiFone provides a convenient, all-in-one solution to help you manage easily and sell more effectively with 1POS."
+    },
+    "cta": {
+      "freeTrial": "Sign Up for a Free Trial",
+      "watchVideo": "Watch Introduction Video"
+    },
+    "image": {
+      "alt": "Hero Image"
+    }
+  },
+  "FeaturesSection": {
+    "content": {
+      "title": "OUTSTANDING FEATURES OF 1POS",
+      "description": "Discover powerful features that help your business manage sales efficiently and achieve sustainable growth"
+    },
+   "features": [
+  {
+    "step": "Feature 1",
+    "title": "Smart Sales Management",
+    "content": "User-friendly cashier interface, fast order processing with automatic calculations and flexible promotion applications.",
+    "image": "/images/1pos-thumbnail_7.png"
+  },
+  {
+    "step": "Feature 2",
+    "title": "Efficient Inventory Management",
+    "content": "Real-time inventory tracking, automatic low-stock alerts, and detailed import/export management with comprehensive reports.",
+    "image": "/images/1pos-thumbnail_10.jpg"
+  },
+  {
+    "step": "Feature 3",
+    "title": "Revenue Reports and Analysis",
+    "content": "Intuitive dashboard with charts, real-time revenue reports, and detailed business trend analysis.",
+    "image": "/images/1pos-thumbnail_1.png"
+  }
+]
+
+  },
+  "PricingSection": {
+    "content": {
+      "title": "EVERY BUSINESS"
+    },
+    "plans": [
+      {
+        "name": "1POS",
+        "subtitle": "Basic Sales Management Package",
+        "period": "VND/year",
+        "price": "4.140.000",
+        "originalPrice": "3.600.000",
+        "features": [
+          "Basic Sales Management",
+          "Inventory Management",
+          "Revenue Reports",
+          "24/7 Support",
+          "1 Branch"
+        ],
+        "highlighted": false
+      },
+      {
+        "name": "1POS",
+        "subtitle": "Advanced Sales Management Package",
+        "period": "VND/month",
+        "price": "720.000",
+        "originalPrice": "660.000",
+        "features": [
+          "All Basic Package Features",
+          "Employee Management",
+          "Customer Management",
+          "Multi-Channel Integration",
+          "Unlimited Branches"
+        ],
+        "highlighted": true
+      },
+      {
+        "name": "1POS",
+        "subtitle": "Professional Sales Management Package",
+        "period": "VND/month",
+        "price": "1.296.000",
+        "originalPrice": "1.176.000",
+        "features": [
+          "All Advanced Package Features",
+          "API Integration",
+          "Custom Interface",
+          "In-Depth Training",
+          "Priority Support"
+        ],
+        "highlighted": false
+      }
+    ],
+    "highlight": {
+      "mostPopular": "Most Popular"
+    },
+    "cta": {
+      "signUpNow": "Sign Up Now"
+    }
+  },
+  "ProductShowcase": {
+    "content": {
+      "title": "WHY CHOOSE 1POS MOBIFONE",
+      "description": "A comprehensive sales management solution with modern technology, helping businesses optimize processes and increase revenue"
+    },
+    "video": {
+      "title": "MobiFone 1POS",
+      "description": "Comprehensive Sales Management Solution"
+    }
+  },
+  "SupportSection": {
+    "content": {
+      "title": "CUSTOMER SUPPORT",
+      "description": "We are always ready to support you anytime, anywhere with a professional and dedicated team",
+      "formTitle": "Contact Us Now"
+    },
+    "accordion": [
+      {
+        "id": 1,
+        "title": "1POS Customer Support Assistant",
+        "imageUrl": "https://www.volantesystems.com/wp-content/uploads/2023/07/team-2.png"
+      },
+      {
+        "id": 2,
+        "title": "Guide to Using Sales Features",
+        "imageUrl": "https://giaiphapmobifone.vn/wp-content/uploads/2024/07/1pos-post.png"
+      },
+      {
+        "id": 3,
+        "title": "Chatbot for Consultation & Quick Issue Resolution",
+        "imageUrl": "https://bimpos.com/sites/default/files/images/posts/960x0.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Technical Support and Device Management",
+        "imageUrl": "https://www.vitalpos.com/images/vital-family.jpg"
+      }
+    ],
+    "form": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message"
+      },
+      "submit": "Send Message"
+    }
+  },
+  "TestimonialsSection": {
+    "content": {
+      "title": "CUSTOMER REVIEWS",
+      "description": "Thousands of businesses have trusted and used 1POS to manage their operations"
+    }
+  },
+    "NewsSection": {
+    "content": {
+      "title": "LATEST NEWS FROM 1POS"
+    },
+    "cta": {
+      "readMore": "Read More"
+    }
+  },
+  "Footer": {
+    "company": {
+      "logoAlt": "1POS Logo",
+      "description": "Comprehensive sales management solution for Vietnamese businesses. Developed by MobiFone with modern technology.",
+      "address": "6th Floor, MobiFone Building, 1 Pham Van Bach, Yen Hoa, Cau Giay, Hanoi",
+      "phone": "1900 1234",
+      "email": "support@1pos.vn"
+    },
+    "links": {
+      "product": {
+        "title": "Product",
+        "items": [
+          { "label": "Features", "href": "#features" },
+          { "label": "Pricing", "href": "#pricing" },
+          { "label": "Download App", "href": "#" },
+          { "label": "API", "href": "#" }
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "items": [
+          { "label": "About Us", "href": "#" },
+          { "label": "News", "href": "#news" },
+          { "label": "Careers", "href": "#" },
+          { "label": "Contact", "href": "#" }
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "items": [
+          { "label": "Help Center", "href": "#" },
+          { "label": "User Guide", "href": "#" },
+          { "label": "Terms of Service", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" }
+        ]
+      }
+    },
+    "newsletter": {
+      "title": "Subscribe to Newsletter",
+      "description": "Receive the latest updates on products and special offers",
+      "emailPlaceholder": "Your Email",
+      "subscribe": "Subscribe"
+    },
+    "bottom": {
+      "copyright": "© 2025 1POS by MobiFone. All rights reserved.",
+      "social": {
+        "facebook": "Facebook",
+        "youtube": "YouTube",
+        "linkedin": "LinkedIn"
+      }
+    }
+  }
+}

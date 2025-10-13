@@ -1,0 +1,237 @@
+{
+  "Header": {
+    "nav": {
+      "features": "Tính năng",
+      "pricing": "Bảng giá",
+      "solutions": "Giải pháp",
+      "support": "Liên hệ",
+      "news": "Tin tức",
+      "aboutUs": "Về chúng tôi"
+    },
+    "cta": {
+      "signUp": "Đăng ký",
+      "signIn": "Đăng nhập"
+    },
+    "logo": {
+      "alt": "1POS Logo"
+    }
+  },
+  "HeroSection": {
+    "content": {
+      "title": "Giải pháp Quản lý bán hàng toàn diện",
+      "description": "MobiFone cung cấp giải pháp tiện lợi, toàn diện giúp bạn quản lý dễ dàng, bán hàng hiệu quả hơn với 1POS."
+    },
+    "cta": {
+      "freeTrial": "Đăng ký dung thử miễn phí",
+      "watchVideo": "Xem video giới thiệu"
+    },
+    "image": {
+      "alt": "Hero Image"
+    }
+  },
+  "FeaturesSection": {
+    "content": {
+      "title": "TÍNH NĂNG NỔI BẬT CỦA 1POS",
+      "description": "Khám phá những tính năng mạnh mẽ giúp doanh nghiệp của bạn quản lý bán hàng hiệu quả và tăng trưởng bền vững"
+    },
+"features": [
+  {
+    "step": "Tính năng 1",
+    "title": "Quản lý bán hàng thông minh",
+    "content": "Giao diện thu ngân thân thiện, xử lý đơn hàng nhanh chóng với tính năng tính toán tự động và áp dụng khuyến mãi linh hoạt.",
+    "image": "/images/1pos-thumbnail_7.png"
+  },
+  {
+    "step": "Tính năng 2",
+    "title": "Quản lý kho hàng hiệu quả",
+    "content": "Theo dõi tồn kho real-time, cảnh báo hết hàng tự động và quản lý nhập xuất kho với báo cáo chi tiết.",
+    "image": "/images/1pos-thumbnail_10.jpg"
+  },
+  {
+    "step": "Tính năng 3",
+    "title": "Báo cáo và phân tích doanh thu",
+    "content": "Dashboard trực quan với biểu đồ, báo cáo doanh thu theo thời gian thực và phân tích xu hướng kinh doanh chi tiết.",
+    "image": "/images/1pos-thumbnail_1.png"
+  }
+]
+
+  },
+  "PricingSection": {
+    "content": {
+      "title": "MỌI DOANH NGHIỆP"
+    },
+    "plans": [
+      {
+        "name": "1POS",
+        "subtitle": "Gói phần mềm quản lý bán hàng cơ bản",
+        "period": "VNĐ/năm",
+        "price": "4.140.000",
+        "originalPrice": "3.600.000",
+        "features": [
+          "Quản lý bán hàng cơ bản",
+          "Quản lý kho hàng",
+          "Báo cáo doanh thu",
+          "Hỗ trợ 24/7",
+          "1 chi nhánh"
+        ],
+        "highlighted": false
+      },
+      {
+        "name": "1POS",
+        "subtitle": "Gói phần mềm quản lý bán hàng nâng cao",
+        "period": "VNĐ/tháng",
+        "price": "720.000",
+        "originalPrice": "660.000",
+        "features": [
+          "Tất cả tính năng gói cơ bản",
+          "Quản lý nhân viên",
+          "Quản lý khách hàng",
+          "Tích hợp đa kênh",
+          "Không giới hạn chi nhánh"
+        ],
+        "highlighted": true
+      },
+      {
+        "name": "1POS",
+        "subtitle": "Gói phần mềm quản lý bán hàng chuyên nghiệp",
+        "period": "VNĐ/tháng",
+        "price": "1.296.000",
+        "originalPrice": "1.176.000",
+        "features": [
+          "Tất cả tính năng gói nâng cao",
+          "API tích hợp",
+          "Tùy chỉnh giao diện",
+          "Đào tạo chuyên sâu",
+          "Hỗ trợ ưu tiên"
+        ],
+        "highlighted": false
+      }
+    ],
+    "highlight": {
+      "mostPopular": "Phổ biến nhất"
+    },
+    "cta": {
+      "signUpNow": "Đăng ký ngay"
+    }
+  },
+  "ProductShowcase": {
+    "content": {
+      "title": "VÌ SAO CHỌN 1POS MOBIFONE",
+      "description": "Giải pháp quản lý bán hàng toàn diện với công nghệ hiện đại, giúp doanh nghiệp tối ưu hóa quy trình kinh doanh và gia tăng doanh thu"
+    },
+    "video": {
+      "title": "MobiFone 1POS",
+      "description": "Giải pháp quản lý bán hàng toàn diện"
+    }
+  },
+  "SupportSection": {
+    "content": {
+      "title": "HỖ TRỢ KHÁCH HÀNG",
+      "description":"Chúng tôi luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi với đội ngũ chuyên nghiệp và tận tâm",
+      "formTitle": "Liên hệ với chúng tôi ngay"
+    },
+    "accordion": [
+      {
+        "id": 1,
+        "title": "Trợ lý hỗ trợ khách hàng 1POS",
+        "imageUrl": "https://www.volantesystems.com/wp-content/uploads/2023/07/team-2.png"
+      },
+      {
+        "id": 2,
+        "title": "Hướng dẫn sử dụng tính năng bán hàng",
+        "imageUrl": "https://giaiphapmobifone.vn/wp-content/uploads/2024/07/1pos-post.png"
+      },
+      {
+        "id": 3,
+        "title": "Chatbot tư vấn & xử lý sự cố nhanh",
+        "imageUrl": "https://bimpos.com/sites/default/files/images/posts/960x0.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Hỗ trợ kỹ thuật và quản lý thiết bị",
+        "imageUrl": "https://www.vitalpos.com/images/vital-family.jpg"
+      }
+    ],
+    "form": {
+      "name": {
+        "label": "Tên của bạn",
+        "placeholder": "Nhập tên của bạn"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "message": {
+        "label": "Tin nhắn",
+        "placeholder": "Nhập tin nhắn của bạn"
+      },
+      "submit": "Gửi tin nhắn"
+    }
+  },
+  "TestimonialsSection": {
+    "content": {
+      "title": "ĐÁNH GIÁ CỦA KHÁCH HÀNG",
+      "description": "Hàng nghìn doanh nghiệp đã tin tưởng và sử dụng 1POS để quản lý kinh doanh của họ"
+    }
+  },
+    "NewsSection": {
+    "content": {
+      "title": "TIN TỨC MỚI NHẤT CỦA 1POS"
+    },
+    "cta": {
+      "readMore": "Đọc thêm"
+    }
+  },
+  "Footer": {
+    "company": {
+      "logoAlt": "1POS Logo",
+      "description": "Giải pháp quản lý bán hàng toàn diện cho doanh nghiệp Việt Nam. Được phát triển bởi MobiFone với công nghệ hiện đại.",
+      "address": "Tầng 6, Tòa nhà MobiFone, 1 Phạm Văn Bạch, Yên Hòa, Cầu Giấy, Hà Nội",
+      "phone": "1900 1234",
+      "email": "support@1pos.vn"
+    },
+    "links": {
+      "product": {
+        "title": "Sản phẩm",
+        "items": [
+          { "label": "Tính năng", "href": "#features" },
+          { "label": "Bảng giá", "href": "#pricing" },
+          { "label": "Tải ứng dụng", "href": "#" },
+          { "label": "API", "href": "#" }
+        ]
+      },
+      "company": {
+        "title": "Công ty",
+        "items": [
+          { "label": "Về chúng tôi", "href": "#" },
+          { "label": "Tin tức", "href": "#news" },
+          { "label": "Tuyển dụng", "href": "#" },
+          { "label": "Liên hệ", "href": "#" }
+        ]
+      },
+      "support": {
+        "title": "Hỗ trợ",
+        "items": [
+          { "label": "Trung tâm trợ giúp", "href": "#" },
+          { "label": "Hướng dẫn sử dụng", "href": "#" },
+          { "label": "Điều khoản dịch vụ", "href": "#" },
+          { "label": "Chính sách bảo mật", "href": "#" }
+        ]
+      }
+    },
+    "newsletter": {
+      "title": "Đăng ký nhận tin",
+      "description": "Nhận thông tin mới nhất về sản phẩm và ưu đãi đặc biệt",
+      "emailPlaceholder": "Email của bạn",
+      "subscribe": "Đăng ký"
+    },
+    "bottom": {
+      "copyright": "© 2025 1POS by MobiFone. All rights reserved.",
+      "social": {
+        "facebook": "Facebook",
+        "youtube": "YouTube",
+        "linkedin": "LinkedIn"
+      }
+    }
+  }
+}
