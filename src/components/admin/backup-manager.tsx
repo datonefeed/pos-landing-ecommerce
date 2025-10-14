@@ -9,6 +9,7 @@ import { toast } from "sonner";
 export default function BackupManager() {
   const [isBackingUp, setIsBackingUp] = useState(false);
   const [isRestoring, setIsRestoring] = useState(false);
+  const [restoreFile, setRestoreFile] = useState<File | null>(null);
 
   const handleBackup = async () => {
     setIsBackingUp(true);
@@ -36,13 +37,23 @@ export default function BackupManager() {
     }
   };
 
-  const handleRestore = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file) return;
+    if (file) {
+      setRestoreFile(file);
+      toast.info(`Đã chọn file: ${file.name}`);
+    }
+  };
+
+  const handleRestore = async () => {
+    if (!restoreFile) {
+      toast.error("Vui lòng chọn file backup trước!");
+      return;
+    }
 
     setIsRestoring(true);
     try {
-      const fileContent = await file.text();
+      const fileContent = await restoreFile.text();
       const backup = JSON.parse(fileContent);
 
       const response = await fetch("/api/admin/backup", {
@@ -59,8 +70,7 @@ export default function BackupManager() {
       toast.error("Failed to restore backup. Please check the file format.");
     } finally {
       setIsRestoring(false);
-      // Reset the input
-      event.target.value = "";
+      setRestoreFile(null);
     }
   };
 
@@ -69,6 +79,7 @@ export default function BackupManager() {
       <h3 className="text-lg font-semibold text-gray-900">Backup & Restore</h3>
 
       <div className="space-y-4">
+        {/* Backup Section */}
         <div>
           <Label className="text-sm font-medium text-gray-700 mb-2 block">Tạo Backup</Label>
           <p className="text-sm text-gray-600 mb-3">
@@ -79,24 +90,41 @@ export default function BackupManager() {
           </Button>
         </div>
 
+        {/* Restore Section */}
         <div>
           <Label className="text-sm font-medium text-gray-700 mb-2 block">
             Khôi phục từ Backup
           </Label>
           <p className="text-sm text-gray-600 mb-3">
-            Tải lên file backup để khôi phục nội dung trước đó
+            Chọn file backup rồi bấm "Khôi phục Backup" để khôi phục nội dung trước đó
           </p>
-          <Input
-            type="file"
-            accept=".json"
-            onChange={handleRestore}
-            disabled={isRestoring}
-            className="cursor-pointer"
-          />
-          {isRestoring && <p className="text-sm text-blue-600 mt-2">Đang khôi phục...</p>}
+
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <Input
+              type="file"
+              accept=".json"
+              onChange={handleFileSelect}
+              disabled={isRestoring}
+              className="cursor-pointer sm:w-1/2"
+            />
+            <Button
+              onClick={handleRestore}
+              disabled={isRestoring || !restoreFile}
+              variant="default"
+            >
+              {isRestoring ? "Đang khôi phục..." : "Khôi phục Backup"}
+            </Button>
+          </div>
+
+          {restoreFile && !isRestoring && (
+            <p className="text-sm text-green-600 mt-2">
+              File đã chọn: <strong>{restoreFile.name}</strong>
+            </p>
+          )}
         </div>
       </div>
 
+      {/* Warning Box */}
       <div className="bg-yellow-50 border border-yellow-200 rounded-md p-4">
         <div className="flex">
           <div className="ml-3">
