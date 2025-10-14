@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { useTranslations } from "next-intl";
 
 export function NewsSection() {
@@ -44,41 +51,90 @@ export function NewsSection() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {articles.map((article, index) => (
-            <motion.article
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={article.image || "/placeholder.svg"}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                  <Calendar className="w-4 h-4" />
-                  <span>{article.date}</span>
+        {articles.length < 4 ? (
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {articles.map((article, index) => (
+              <motion.article
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="bg-white rounded-xl overflow-hidden border"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={article.image || "/placeholder.svg"}
+                    alt={article.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
                 </div>
-                <h3 className="font-semibold text-lg text-foreground mb-3 line-clamp-2">
-                  {article.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{article.excerpt}</p>
-                <Button variant="link" className="p-0 h-auto text-primary">
-                  {t("cta.readMore")}
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </div>
-            </motion.article>
-          ))}
-        </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                    <Calendar className="w-4 h-4" />
+                    <span>{article.date}</span>
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground mb-3 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                    {article.excerpt}
+                  </p>
+                  <Button variant="link" className="p-0 h-auto text-primary">
+                    {t("cta.readMore")}
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        ) : (
+          <div className="max-w-6xl mx-auto">
+            <Carousel opts={{ align: "start", loop: false }} className="w-full">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {articles.map((article, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <motion.article
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      whileHover={{ y: -10 }}
+                      className="bg-white rounded-xl overflow-hidden border"
+                    >
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={article.image || "/placeholder.svg"}
+                          alt={article.title}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                          <Calendar className="w-4 h-4" />
+                          <span>{article.date}</span>
+                        </div>
+                        <h3 className="font-semibold text-lg text-foreground mb-3 line-clamp-2">
+                          {article.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                          {article.excerpt}
+                        </p>
+                        <Button variant="link" className="p-0 h-auto text-primary">
+                          {t("cta.readMore")}
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </div>
+                    </motion.article>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </div>
+        )}
       </div>
     </section>
   );
