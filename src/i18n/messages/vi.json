@@ -34,27 +34,26 @@
       "title": "TÍNH NĂNG NỔI BẬT CỦA 1POS",
       "description": "Khám phá những tính năng mạnh mẽ giúp doanh nghiệp của bạn quản lý bán hàng hiệu quả và tăng trưởng bền vững"
     },
-"features": [
-  {
-    "step": "Tính năng 1",
-    "title": "Quản lý bán hàng thông minh",
-    "content": "Giao diện thu ngân thân thiện, xử lý đơn hàng nhanh chóng với tính năng tính toán tự động và áp dụng khuyến mãi linh hoạt.",
-    "image": "/images/1pos-thumbnail_7.png"
-  },
-  {
-    "step": "Tính năng 2",
-    "title": "Quản lý kho hàng hiệu quả",
-    "content": "Theo dõi tồn kho real-time, cảnh báo hết hàng tự động và quản lý nhập xuất kho với báo cáo chi tiết.",
-    "image": "/images/1pos-thumbnail_10.jpg"
-  },
-  {
-    "step": "Tính năng 3",
-    "title": "Báo cáo và phân tích doanh thu",
-    "content": "Dashboard trực quan với biểu đồ, báo cáo doanh thu theo thời gian thực và phân tích xu hướng kinh doanh chi tiết.",
-    "image": "/images/1pos-thumbnail_1.png"
-  }
-]
-
+    "features": [
+      {
+        "step": "Tính năng 1",
+        "title": "Quản lý bán hàng thông minh",
+        "content": "Giao diện thu ngân thân thiện, xử lý đơn hàng nhanh chóng với tính năng tính toán tự động và áp dụng khuyến mãi linh hoạt.",
+        "image": "/images/1pos-thumbnail_7.png"
+      },
+      {
+        "step": "Tính năng 2",
+        "title": "Quản lý kho hàng hiệu quả",
+        "content": "Theo dõi tồn kho real-time, cảnh báo hết hàng tự động và quản lý nhập xuất kho với báo cáo chi tiết.",
+        "image": "/images/1pos-thumbnail_10.jpg"
+      },
+      {
+        "step": "Tính năng 3",
+        "title": "Báo cáo và phân tích doanh thu",
+        "content": "Dashboard trực quan với biểu đồ, báo cáo doanh thu theo thời gian thực và phân tích xu hướng kinh doanh chi tiết.",
+        "image": "/images/1pos-thumbnail_1.png"
+      }
+    ]
   },
   "PricingSection": {
     "content": {
@@ -127,7 +126,7 @@
   "SupportSection": {
     "content": {
       "title": "HỖ TRỢ KHÁCH HÀNG",
-      "description":"Chúng tôi luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi với đội ngũ chuyên nghiệp và tận tâm",
+      "description": "Chúng tôi luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi với đội ngũ chuyên nghiệp và tận tâm",
       "formTitle": "Liên hệ với chúng tôi ngay"
     },
     "accordion": [
@@ -174,7 +173,7 @@
       "description": "Hàng nghìn doanh nghiệp đã tin tưởng và sử dụng 1POS để quản lý kinh doanh của họ"
     }
   },
-    "NewsSection": {
+  "NewsSection": {
     "content": {
       "title": "TIN TỨC MỚI NHẤT CỦA 1POS"
     },
@@ -194,28 +193,64 @@
       "product": {
         "title": "Sản phẩm",
         "items": [
-          { "label": "Tính năng", "href": "#features" },
-          { "label": "Bảng giá", "href": "#pricing" },
-          { "label": "Tải ứng dụng", "href": "#" },
-          { "label": "API", "href": "#" }
+          {
+            "label": "Tính năng",
+            "href": "#features"
+          },
+          {
+            "label": "Bảng giá",
+            "href": "#pricing"
+          },
+          {
+            "label": "Tải ứng dụng",
+            "href": "#"
+          },
+          {
+            "label": "API",
+            "href": "#"
+          }
         ]
       },
       "company": {
         "title": "Công ty",
         "items": [
-          { "label": "Về chúng tôi", "href": "#" },
-          { "label": "Tin tức", "href": "#news" },
-          { "label": "Tuyển dụng", "href": "#" },
-          { "label": "Liên hệ", "href": "#" }
+          {
+            "label": "Về chúng tôi",
+            "href": "#"
+          },
+          {
+            "label": "Tin tức",
+            "href": "#news"
+          },
+          {
+            "label": "Tuyển dụng",
+            "href": "#"
+          },
+          {
+            "label": "Liên hệ",
+            "href": "#"
+          }
         ]
       },
       "support": {
         "title": "Hỗ trợ",
         "items": [
-          { "label": "Trung tâm trợ giúp", "href": "#" },
-          { "label": "Hướng dẫn sử dụng", "href": "#" },
-          { "label": "Điều khoản dịch vụ", "href": "#" },
-          { "label": "Chính sách bảo mật", "href": "#" }
+          {
+            "label": "Trung tâm trợ giúp",
+            "href": "#"
+          },
+          {
+            "label": "Hướng dẫn sử dụng",
+            "href": "#"
+          },
+          {
+            "label": "Điều khoản dịch vụ",
+            "href": "#"
+          },
+          {
+            "label": "Chính sách bảo mật",
+            "href": "#"
+          }
         ]
       }
     },

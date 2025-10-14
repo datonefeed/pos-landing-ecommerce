@@ -34,27 +34,26 @@
       "title": "OUTSTANDING FEATURES OF 1POS",
       "description": "Discover powerful features that help your business manage sales efficiently and achieve sustainable growth"
     },
-   "features": [
-  {
-    "step": "Feature 1",
-    "title": "Smart Sales Management",
-    "content": "User-friendly cashier interface, fast order processing with automatic calculations and flexible promotion applications.",
-    "image": "/images/1pos-thumbnail_7.png"
-  },
-  {
-    "step": "Feature 2",
-    "title": "Efficient Inventory Management",
-    "content": "Real-time inventory tracking, automatic low-stock alerts, and detailed import/export management with comprehensive reports.",
-    "image": "/images/1pos-thumbnail_10.jpg"
-  },
-  {
-    "step": "Feature 3",
-    "title": "Revenue Reports and Analysis",
-    "content": "Intuitive dashboard with charts, real-time revenue reports, and detailed business trend analysis.",
-    "image": "/images/1pos-thumbnail_1.png"
-  }
-]
-
+    "features": [
+      {
+        "step": "Feature 1",
+        "title": "Smart Sales Management",
+        "content": "User-friendly cashier interface, fast order processing with automatic calculations and flexible promotion applications.",
+        "image": "/images/1pos-thumbnail_7.png"
+      },
+      {
+        "step": "Feature 2",
+        "title": "Efficient Inventory Management",
+        "content": "Real-time inventory tracking, automatic low-stock alerts, and detailed import/export management with comprehensive reports.",
+        "image": "/images/1pos-thumbnail_10.jpg"
+      },
+      {
+        "step": "Feature 3",
+        "title": "Revenue Reports and Analysis",
+        "content": "Intuitive dashboard with charts, real-time revenue reports, and detailed business trend analysis.",
+        "image": "/images/1pos-thumbnail_1.png"
+      }
+    ]
   },
   "PricingSection": {
     "content": {
@@ -174,7 +173,7 @@
       "description": "Thousands of businesses have trusted and used 1POS to manage their operations"
     }
   },
-    "NewsSection": {
+  "NewsSection": {
     "content": {
       "title": "LATEST NEWS FROM 1POS"
     },
@@ -194,28 +193,64 @@
       "product": {
         "title": "Product",
         "items": [
-          { "label": "Features", "href": "#features" },
-          { "label": "Pricing", "href": "#pricing" },
-          { "label": "Download App", "href": "#" },
-          { "label": "API", "href": "#" }
+          {
+            "label": "Features",
+            "href": "#features"
+          },
+          {
+            "label": "Pricing",
+            "href": "#pricing"
+          },
+          {
+            "label": "Download App",
+            "href": "#"
+          },
+          {
+            "label": "API",
+            "href": "#"
+          }
         ]
       },
       "company": {
         "title": "Company",
         "items": [
-          { "label": "About Us", "href": "#" },
-          { "label": "News", "href": "#news" },
-          { "label": "Careers", "href": "#" },
-          { "label": "Contact", "href": "#" }
+          {
+            "label": "About Us",
+            "href": "#"
+          },
+          {
+            "label": "News",
+            "href": "#news"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          },
+          {
+            "label": "Contact",
+            "href": "#"
+          }
         ]
       },
       "support": {
         "title": "Support",
         "items": [
-          { "label": "Help Center", "href": "#" },
-          { "label": "User Guide", "href": "#" },
-          { "label": "Terms of Service", "href": "#" },
-          { "label": "Privacy Policy", "href": "#" }
+          {
+            "label": "Help Center",
+            "href": "#"
+          },
+          {
+            "label": "User Guide",
+            "href": "#"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "#"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "#"
+          }
         ]
       }
     },
