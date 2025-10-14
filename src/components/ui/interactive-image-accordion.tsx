@@ -81,7 +81,10 @@ export function LandingAccordionItem() {
           <form className="mt-6 sm:mt-8 space-y-4 sm:space-y-5 max-w-xl mx-auto lg:mx-0">
             {/* Name */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-1 text-left"
+              >
                 {t("form.name.label")}
               </label>
               <input
@@ -95,7 +98,10 @@ export function LandingAccordionItem() {
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-1 text-left"
+              >
                 {t("form.email.label")}
               </label>
               <input
@@ -109,7 +115,10 @@ export function LandingAccordionItem() {
 
             {/* Message */}
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-1 text-left"
+              >
                 {t("form.message.label")}
               </label>
               <textarea
