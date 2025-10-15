@@ -79,14 +79,21 @@ export async function PUT(request: NextRequest) {
     }
 
     // Handle full language updates
+    if (vi && en) {
+      // Update both files completely
+      await Promise.all([
+        writeJsonFile(VI_FILE_PATH, vi),
+        writeJsonFile(EN_FILE_PATH, en),
+      ]);
+      return jsonResponse({ success: true });
+    }
+
     if (language === "vi" && vi) {
-      const currentViData = await readJsonFile(VI_FILE_PATH);
-      await writeJsonFile(VI_FILE_PATH, { ...currentViData, ...vi });
+      await writeJsonFile(VI_FILE_PATH, vi);
     }
 
     if (language === "en" && en) {
-      const currentEnData = await readJsonFile(EN_FILE_PATH);
-      await writeJsonFile(EN_FILE_PATH, { ...currentEnData, ...en });
+      await writeJsonFile(EN_FILE_PATH, en);
     }
 
     return jsonResponse({ success: true });
