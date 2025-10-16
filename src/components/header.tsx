@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./language-switcher";
+import media from "@/data/media.json";
 
 export function Header() {
   const t = useTranslations("Header");
@@ -44,12 +45,7 @@ export function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
-              <Image
-                src="images/LOGO_SVG_1POS_WHITE.svg"
-                height="90"
-                width="120"
-                alt={t("logo.alt")}
-              />
+              <Image src={media.logo.white} height="90" width="120" alt={t("logo.alt")} />
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -135,12 +131,7 @@ export function Header() {
               <div className="flex items-center justify-between h-16 max-w-7xl mx-auto">
                 {/* Logo */}
                 <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
-                  <Image
-                    src="/images/LOGO_SVG_1POS_BLUE.svg"
-                    height="90"
-                    width="120"
-                    alt={t("logo.alt")}
-                  />
+                  <Image src={media.logo.color} height="90" width="120" alt={t("logo.alt")} />
                 </motion.div>
 
                 {/* Desktop Navigation */}
