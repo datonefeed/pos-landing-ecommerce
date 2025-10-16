@@ -3,10 +3,15 @@
 import { motion } from "framer-motion";
 import { FeatureSteps } from "@/components/ui/feature";
 import { useTranslations } from "next-intl";
+import media from "@/data/media.json";
 
 export function FeaturesSection() {
   const t = useTranslations("FeaturesSection");
-  const features = t.raw("features");
+  const featuresI18n = t.raw("features");
+  const features = featuresI18n.map((item) => ({
+    ...item,
+    image: media.FeaturesSection[item.id as keyof typeof media.FeaturesSection],
+  }));
   return (
     <section id="features" className="py-20 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto px-4">
