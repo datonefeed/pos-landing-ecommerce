@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import media from "@/data/media.json";
 
 export function Footer() {
   const t = useTranslations("Footer");
@@ -37,11 +38,7 @@ export function Footer() {
               className="flex items-center gap-2 mb-4"
             >
               <a href="#">
-                <img
-                  src="images/LOGO_SVG_1POS_WHITE.svg"
-                  alt={t("company.logoAlt")}
-                  className="h-10"
-                />
+                <img src={media.logo.white} alt={t("company.logoAlt")} className="h-10" />
               </a>
             </motion.div>
             <motion.p
