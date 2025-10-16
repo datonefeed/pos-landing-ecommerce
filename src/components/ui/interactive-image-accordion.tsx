@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
+import media from "@/data/media.json";
 
 // --- Data for the image accordion ---
 const AccordionItem = ({
@@ -61,7 +62,11 @@ const AccordionItem = ({
 // --- Main App Component ---
 export function LandingAccordionItem() {
   const t = useTranslations("SupportSection");
-  const accordionItems = t.raw("accordion"); // Sử dụng t.raw để truy cập mảng accordion
+  const accordionI18n = t.raw("accordion");
+  const accordionItems = accordionI18n.map((item) => ({
+    ...item,
+    imageUrl: media.SupportSection[item.id as keyof typeof media.SupportSection],
+  }));
   const [activeIndex, setActiveIndex] = useState(4);
 
   const handleItemHover = (index: number) => {
