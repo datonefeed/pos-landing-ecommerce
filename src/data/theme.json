@@ -1,0 +1,15 @@
+{
+  "primary": {
+    "hsl": "243 75% 59%",
+    "hex": "#4F46E5",
+    "name": "Indigo"
+  },
+  "secondary": {
+    "hsl": "0 0% 96.1%",
+    "hex": "#F5F5F5"
+  },
+  "accent": {
+    "hsl": "0 0% 96.1%",
+    "hex": "#F5F5F5"
+  }
+}
