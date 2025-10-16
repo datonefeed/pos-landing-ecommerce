@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import media from "@/data/media.json";
 
 const Hero2 = () => {
   const t = useTranslations("HeroSection");
@@ -93,7 +94,7 @@ const Hero2 = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-            src="/images/hero-infor.png"
+            src={media.HeroSection.heroImage}
             alt={t("image.alt")}
             className="relative w-full h-auto shadow-md grayscale-100 rounded-lg"
           />
