@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useConfirmDialog } from "@/components/ui/confirm-dialog";
 
 interface SearchAndReplaceProps {
   onSearchReplace: (
@@ -17,14 +18,33 @@ export default function SearchAndReplace({ onSearchReplace }: SearchAndReplacePr
   const [searchTerm, setSearchTerm] = useState("");
   const [replaceTerm, setReplaceTerm] = useState("");
   const [language, setLanguage] = useState<"vi" | "en" | "both">("both");
+  const { confirm, ConfirmDialog } = useConfirmDialog();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const performReplace = () => {
+    onSearchReplace(searchTerm, replaceTerm, language);
+    setSearchTerm("");
+    setReplaceTerm("");
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchTerm.trim() && replaceTerm.trim()) {
-      onSearchReplace(searchTerm, replaceTerm, language);
-      setSearchTerm("");
-      setReplaceTerm("");
-    }
+    if (!searchTerm.trim() || !replaceTerm.trim()) return;
+
+    const languageText =
+      language === "both"
+        ? "cả Tiếng Việt và English"
+        : language === "vi"
+          ? "Tiếng Việt"
+          : "English";
+
+    await confirm({
+      title: "⚠️ Xác nhận thay thế toàn bộ",
+      message: `Bạn có chắc chắn muốn thay thế TẤT CẢ từ "${searchTerm}" thành "${replaceTerm}" trong ${languageText}? Thao tác này KHÔNG THỂ HOÀN TÁC!`,
+      type: "danger",
+      confirmText: "Thay thế",
+      cancelText: "Hủy",
+      onConfirm: performReplace,
+    });
   };
 
   return (
@@ -100,6 +120,7 @@ export default function SearchAndReplace({ onSearchReplace }: SearchAndReplacePr
           nội dung. Hãy cẩn thận khi sử dụng và luôn tạo backup trước.
         </p>
       </div>
+      <ConfirmDialog />
     </div>
   );
 }
