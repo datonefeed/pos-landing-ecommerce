@@ -2,7 +2,9 @@
 
 import { SectionEditor } from "../editors/section-editor";
 import { FieldEditor } from "../editors/field-editor";
+import { MediaImageUploader } from "../editors/media-image-uploader";
 import type { HeroSection } from "@/types/content";
+import media from "@/data/media.json";
 
 interface HeroSectionEditorProps {
   data: HeroSection;
@@ -37,6 +39,22 @@ export function HeroSectionEditor({ data, onUpdate, onSave }: HeroSectionEditorP
           onChange={(value) => onUpdate("cta", "watchVideo", value)}
         />
       </div>
+      <FieldEditor
+        label="Image Alt Text"
+        value={data.image.alt}
+        onChange={(value) => onUpdate("image", "alt", value)}
+      />
+      <MediaImageUploader
+        label="Hero Image"
+        currentUrl={media.HeroSection.heroImage}
+        section="HeroSection"
+        field="heroImage"
+        onUpload={(url) => {
+          console.log("Hero image uploaded:", url);
+        }}
+        folder="images"
+        showPreview={true}
+      />
     </SectionEditor>
   );
 }
