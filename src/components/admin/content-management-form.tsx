@@ -8,6 +8,8 @@ import { useSectionSave } from "@/hooks/useSectionSave";
 import BackupManager from "@/components/admin/backup-manager";
 import SearchAndReplace from "@/components/admin/search-and-replace";
 import PreviewManager from "@/components/admin/preview-manager";
+import { ThemeCustomizer } from "@/components/admin/theme-customizer";
+import { useConfirmDialog } from "@/components/ui/confirm-dialog";
 import { HeaderSection } from "@/components/admin/sections/header-section";
 import { HeroSectionEditor } from "@/components/admin/sections/hero-section";
 import { FeaturesSectionEditor } from "@/components/admin/sections/features-section";
@@ -159,16 +161,17 @@ function LanguageEditor({ data, onChange, language, getAllData }: LanguageEditor
 export default function ContentManagementForm() {
   const { data, setData, loading, saving, saveData } = useContentManagement();
   const [activeTab, setActiveTab] = useState("vi");
+  const { confirm, ConfirmDialog } = useConfirmDialog();
 
   // Search and replace function
-  const handleSearchReplace = (
+  const handleSearchReplace = async (
     searchTerm: string,
     replaceTerm: string,
     language: "vi" | "en" | "both"
   ) => {
     if (!data) return;
 
-    const searchAndReplaceInObject = (obj: any): any => {
+    const searchAndReplaceInObject = (obj: unknown): unknown => {
       if (typeof obj === "string") {
         return obj.replace(new RegExp(searchTerm, "g"), replaceTerm);
       }
@@ -176,9 +179,9 @@ export default function ContentManagementForm() {
         return obj.map(searchAndReplaceInObject);
       }
       if (obj && typeof obj === "object") {
-        const newObj: any = {};
-        for (const key in obj) {
-          newObj[key] = searchAndReplaceInObject(obj[key]);
+        const newObj: Record<string, unknown> = {};
+        for (const key in obj as Record<string, unknown>) {
+          newObj[key] = searchAndReplaceInObject((obj as Record<string, unknown>)[key]);
         }
         return newObj;
       }
@@ -188,14 +191,26 @@ export default function ContentManagementForm() {
     const newData = { ...data };
 
     if (language === "vi" || language === "both") {
-      newData.vi = searchAndReplaceInObject(data.vi);
+      newData.vi = searchAndReplaceInObject(data.vi) as ContentData;
     }
 
     if (language === "en" || language === "both") {
-      newData.en = searchAndReplaceInObject(data.en);
+      newData.en = searchAndReplaceInObject(data.en) as ContentData;
     }
 
     setData(newData);
+  };
+
+  const handleSaveAll = async () => {
+    await confirm({
+      title: "Xác nhận lưu tất cả thay đổi",
+      message:
+        "Bạn có chắc chắn muốn lưu TẤT CẢ thay đổi hiện tại? Thao tác này sẽ cập nhật file nội dung cho cả 2 ngôn ngữ.",
+      type: "warning",
+      confirmText: "Lưu tất cả",
+      cancelText: "Hủy",
+      onConfirm: saveData,
+    });
   };
 
   if (loading) {
@@ -228,7 +243,7 @@ export default function ContentManagementForm() {
               <h1 className="text-3xl font-bold text-gray-900">Quản lý nội dung Landing Page</h1>
               <p className="mt-2 text-gray-600">Chỉnh sửa nội dung cho các ngôn ngữ khác nhau</p>
             </div>
-            <Button onClick={saveData} disabled={saving} size="lg">
+            <Button onClick={handleSaveAll} disabled={saving} size="lg">
               {saving ? "Đang lưu..." : "Lưu thay đổi"}
             </Button>
           </div>
@@ -239,7 +254,7 @@ export default function ContentManagementForm() {
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="vi">Tiếng Việt</TabsTrigger>
-            <TabsTrigger value="en">English</TabsTrigger>
+            <TabsTrigger value="en">Tiếng Anh</TabsTrigger>
             <TabsTrigger value="tools">Công cụ</TabsTrigger>
             <TabsTrigger value="backup">Backup</TabsTrigger>
           </TabsList>
@@ -264,6 +279,7 @@ export default function ContentManagementForm() {
 
           <TabsContent value="tools" className="mt-6">
             <div className="space-y-6">
+              <ThemeCustomizer />
               <SearchAndReplace onSearchReplace={handleSearchReplace} />
               <PreviewManager />
             </div>
@@ -274,6 +290,7 @@ export default function ContentManagementForm() {
           </TabsContent>
         </Tabs>
       </div>
+      <ConfirmDialog />
     </div>
   );
 }
