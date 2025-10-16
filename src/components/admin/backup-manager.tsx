@@ -5,13 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { useConfirmDialog } from "@/components/ui/confirm-dialog";
 
 export default function BackupManager() {
   const [isBackingUp, setIsBackingUp] = useState(false);
   const [isRestoring, setIsRestoring] = useState(false);
   const [restoreFile, setRestoreFile] = useState<File | null>(null);
+  const { confirm, ConfirmDialog } = useConfirmDialog();
 
-  const handleBackup = async () => {
+  const createBackup = async () => {
     setIsBackingUp(true);
     try {
       const response = await fetch("/api/admin/backup");
@@ -37,6 +39,18 @@ export default function BackupManager() {
     }
   };
 
+  const handleBackup = async () => {
+    await confirm({
+      title: "Xác nhận tạo backup",
+      message:
+        "Bạn có chắc chắn muốn tạo file backup cho toàn bộ nội dung hiện tại? File sẽ được tải về máy tính của bạn.",
+      type: "info",
+      confirmText: "Tạo Backup",
+      cancelText: "Hủy",
+      onConfirm: createBackup,
+    });
+  };
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -45,11 +59,8 @@ export default function BackupManager() {
     }
   };
 
-  const handleRestore = async () => {
-    if (!restoreFile) {
-      toast.error("Vui lòng chọn file backup trước!");
-      return;
-    }
+  const restoreBackup = async () => {
+    if (!restoreFile) return;
 
     setIsRestoring(true);
     try {
@@ -72,6 +83,22 @@ export default function BackupManager() {
       setIsRestoring(false);
       setRestoreFile(null);
     }
+  };
+
+  const handleRestore = async () => {
+    if (!restoreFile) {
+      toast.error("Vui lòng chọn file backup trước!");
+      return;
+    }
+
+    await confirm({
+      title: "⚠️ Cảnh báo: Khôi phục Backup",
+      message: `Bạn có chắc chắn muốn khôi phục từ file "${restoreFile.name}"? Toàn bộ nội dung hiện tại sẽ BỊ GHI ĐÈ và KHÔNG THỂ HOÀN TÁC!`,
+      type: "danger",
+      confirmText: "Khôi phục",
+      cancelText: "Hủy",
+      onConfirm: restoreBackup,
+    });
   };
 
   return (
@@ -139,6 +166,7 @@ export default function BackupManager() {
           </div>
         </div>
       </div>
+      <ConfirmDialog />
     </div>
   );
 }
