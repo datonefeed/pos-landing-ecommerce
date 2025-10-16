@@ -39,7 +39,7 @@ export default function PreviewManager() {
                 onChange={(e) => setPreviewLanguage(e.target.value as "en")}
                 className="mr-2"
               />
-              English
+              Tiếng Anh
             </label>
           </div>
         </div>
