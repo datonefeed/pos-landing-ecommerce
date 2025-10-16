@@ -43,6 +43,7 @@ export interface HeroSection {
 }
 
 export interface Feature {
+  id?: string;
   step: string;
   title: string;
   content: string;
