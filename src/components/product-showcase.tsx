@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { VideoPlayer } from "./ui/video-thumbnail-player";
 import { useTranslations } from "next-intl";
+import media from "@/data/media.json";
 
 export function ProductShowcase() {
   const t = useTranslations("ProductShowcase");
@@ -57,7 +58,7 @@ export function ProductShowcase() {
           >
             <VideoPlayer
               thumbnailUrl="/images/1pos-thumbnail_10.jpg"
-              videoUrl="https://www.youtube.com/embed/u_GVCK9h8Sg?si=CqgTyg2Cx-YAglGn"
+              videoUrl={media.ProductShowcase.videoEmbedLink}
               title={t("video.title")}
               description={t("video.description")}
               className="rounded-xl"
