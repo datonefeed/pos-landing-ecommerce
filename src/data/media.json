@@ -1,10 +1,10 @@
 {
   "logo": {
-    "white": "/images/1760580440372-1erp_logo_white.png",
-    "color": "/images/1760580461257-1erp_logo_blue.png"
+    "white": "/images/1760608102047-logo_svg_1pos_white.svg",
+    "color": "/images/1760629165653-logo_svg_1pos_blue.svg"
   },
   "HeroSection": {
-    "heroImage": "/images/1760580300371-8bcc7b8d-5d47-4493-a985-0d34a26baa15.png"
+    "heroImage": "/images/1760585543506-ipad.webp"
   },
   "FeaturesSection": {
     "1": "/images/1760523271811-ipad1.png",

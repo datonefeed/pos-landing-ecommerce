@@ -1,7 +1,7 @@
 {
   "Header": {
     "nav": {
-      "features": "Tính năng",
+      "features": "Tính năng Thành Đạt",
       "pricing": "Bảng giá",
       "solutions": "Giải pháp",
       "support": "Liên hệ",
@@ -36,22 +36,22 @@
     },
     "features": [
       {
+        "id": "1",
         "step": "Tính năng 1",
         "title": "Quản lý bán hàng thông minh",
-        "content": "Giao diện thu ngân thân thiện, xử lý đơn hàng nhanh chóng với tính năng tính toán tự động và áp dụng khuyến mãi linh hoạt.",
-        "image": "/images/1pos-thumbnail_7.png"
+        "content": "Giao diện thu ngân thân thiện, xử lý đơn hàng nhanh chóng với tính năng tính toán tự động và áp dụng khuyến mãi linh hoạt."
       },
       {
+        "id": "2",
         "step": "Tính năng 2",
         "title": "Quản lý kho hàng hiệu quả",
-        "content": "Theo dõi tồn kho real-time, cảnh báo hết hàng tự động và quản lý nhập xuất kho với báo cáo chi tiết.",
-        "image": "/images/1pos-thumbnail_10.jpg"
+        "content": "Theo dõi tồn kho real-time, cảnh báo hết hàng tự động và quản lý nhập xuất kho với báo cáo chi tiết."
       },
       {
+        "id": "3",
         "step": "Tính năng 3",
         "title": "Báo cáo và phân tích doanh thu",
-        "content": "Dashboard trực quan với biểu đồ, báo cáo doanh thu theo thời gian thực và phân tích xu hướng kinh doanh chi tiết.",
-        "image": "/images/1pos-thumbnail_1.png"
+        "content": "Dashboard trực quan với biểu đồ, báo cáo doanh thu theo thời gian thực và phân tích xu hướng kinh doanh chi tiết."
       }
     ]
   },
@@ -131,24 +131,20 @@
     },
     "accordion": [
       {
-        "id": 1,
-        "title": "Trợ lý hỗ trợ khách hàng 1POS",
-        "imageUrl": "https://www.volantesystems.com/wp-content/uploads/2023/07/team-2.png"
+        "id": "1",
+        "title": "Trợ lý hỗ trợ khách hàng 1POS"
       },
       {
-        "id": 2,
-        "title": "Hướng dẫn sử dụng tính năng bán hàng",
-        "imageUrl": "https://giaiphapmobifone.vn/wp-content/uploads/2024/07/1pos-post.png"
+        "id": "2",
+        "title": "Hướng dẫn sử dụng tính năng bán hàng"
       },
       {
-        "id": 3,
-        "title": "Chatbot tư vấn & xử lý sự cố nhanh",
-        "imageUrl": "https://bimpos.com/sites/default/files/images/posts/960x0.jpg"
+        "id": "3",
+        "title": "Chatbot tư vấn & xử lý sự cố nhanh"
       },
       {
-        "id": 4,
-        "title": "Hỗ trợ kỹ thuật và quản lý thiết bị",
-        "imageUrl": "https://www.vitalpos.com/images/vital-family.jpg"
+        "id": "4",
+        "title": "Hỗ trợ kỹ thuật và quản lý thiết bị"
       }
     ],
     "form": {
@@ -171,7 +167,99 @@
     "content": {
       "title": "ĐÁNH GIÁ CỦA KHÁCH HÀNG",
       "description": "Hàng nghìn doanh nghiệp đã tin tưởng và sử dụng 1POS để quản lý kinh doanh của họ"
-    }
+    },
+    "cards": [
+      {
+        "id": 1,
+        "imageUrl": "https://i.pinimg.com/736x/d6/8a/12/d68a121e960094f99ad8acd37505fb7d.jpg",
+        "rating": 5,
+        "title": "Giải pháp tuyệt vời cho doanh nghiệp",
+        "name": "Nguyễn Văn An",
+        "position": "Giám đốc Kinh doanh",
+        "company": "Công ty ABC",
+        "testimonial": "1POS đã giúp chúng tôi tối ưu hóa quy trình bán hàng và quản lý kho một cách hiệu quả. Giao diện thân thiện, dễ sử dụng."
+      },
+      {
+        "id": 2,
+        "imageUrl": "https://i.pinimg.com/736x/21/16/f7/2116f71f9d51d875e44d809f074ff079.jpg",
+        "rating": 5,
+        "title": "Tiết kiệm thời gian đáng kể",
+        "name": "Trần Thị Bình",
+        "position": "Chủ cửa hàng",
+        "company": "Cửa hàng XYZ",
+        "testimonial": "Việc quản lý nhiều chi nhánh trở nên dễ dàng hơn bao giờ hết. Báo cáo chi tiết giúp tôi đưa ra quyết định kinh doanh chính xác."
+      },
+      {
+        "id": 3,
+        "imageUrl": "https://i.pinimg.com/1200x/fe/c2/0d/fec20d2958059b8463bffb138d4eaac6.jpg",
+        "rating": 5,
+        "title": "Hỗ trợ khách hàng xuất sắc",
+        "name": "Lê Hoàng Minh",
+        "position": "Quản lý Cửa hàng",
+        "company": "Chuỗi bán lẻ DEF",
+        "testimonial": "Đội ngũ hỗ trợ rất nhiệt tình và chuyên nghiệp. Mọi vấn đề đều được giải quyết nhanh chóng và hiệu quả."
+      },
+      {
+        "id": 4,
+        "imageUrl": "https://i.pinimg.com/736x/84/dc/62/84dc62de850a34a9d420c97f3a2d58f4.jpg",
+        "rating": 5,
+        "title": "Tính năng đa dạng và mạnh mẽ",
+        "name": "Phạm Thu Hà",
+        "position": "CEO",
+        "company": "Công ty GHI",
+        "testimonial": "1POS cung cấp đầy đủ tính năng chúng tôi cần: từ POS, quản lý kho, CRM đến báo cáo phân tích. Tất cả trong một nền tảng."
+      },
+      {
+        "id": 5,
+        "imageUrl": "https://i.pinimg.com/1200x/be/c3/7e/bec37e2c43e703f922f887db2578ce2e.jpg",
+        "rating": 5,
+        "title": "Tăng doanh thu rõ rệt",
+        "name": "Hoàng Văn Khoa",
+        "position": "Giám đốc Marketing",
+        "company": "Thương hiệu JKL",
+        "testimonial": "Sau khi sử dụng 1POS, doanh thu của chúng tôi tăng 30%. Hệ thống khuyến mãi và chương trình khách hàng thân thiết rất hiệu quả."
+      },
+      {
+        "id": 6,
+        "imageUrl": "https://i.pinimg.com/736x/47/dd/47/47dd47b0d66c2fa641e03e370bcb5433.jpg",
+        "rating": 5,
+        "title": "Dễ dàng mở rộng quy mô",
+        "name": "Đỗ Thị Mai",
+        "position": "Founder",
+        "company": "Startup MNO",
+        "testimonial": "Bắt đầu với một cửa hàng nhỏ, giờ chúng tôi đã có 5 chi nhánh. 1POS scale rất tốt theo sự phát triển của doanh nghiệp."
+      },
+      {
+        "id": 7,
+        "imageUrl": "https://i.pinimg.com/736x/05/01/bc/0501bcd327d9df915e83154bbf9456e3.jpg",
+        "rating": 5,
+        "title": "Báo cáo chính xác và chi tiết",
+        "name": "Vũ Đức Nam",
+        "position": "Kế toán trưởng",
+        "company": "Tập đoàn PQR",
+        "testimonial": "Hệ thống báo cáo tài chính và kinh doanh rất chi tiết. Việc đối soát và lập báo cáo cuối tháng giờ đây chỉ mất vài phút."
+      },
+      {
+        "id": 8,
+        "imageUrl": "https://i.pinimg.com/736x/c1/46/be/c146bebffca026d2c4fa76cc85aac917.jpg",
+        "rating": 5,
+        "title": "Tích hợp đa kênh hoàn hảo",
+        "name": "Bùi Thị Lan",
+        "position": "Trưởng phòng Vận hành",
+        "company": "E-commerce STU",
+        "testimonial": "Kết nối website, app, và cửa hàng offline trong một hệ thống. Quản lý đơn hàng đa kênh chưa bao giờ dễ dàng đến thế."
+      },
+      {
+        "id": 9,
+        "imageUrl": "https://i.pinimg.com/736x/91/7a/51/917a51df0d444def3cade8d626305a67.jpg",
+        "rating": 5,
+        "title": "Đáng tin cậy và ổn định",
+        "name": "Phan Văn Tùng",
+        "position": "CTO",
+        "company": "Công nghệ VWX",
+        "testimonial": "Hệ thống chạy rất ổn định, không bao giờ gặp sự cố trong giờ cao điểm. Bảo mật dữ liệu tuyệt đối, chúng tôi hoàn toàn yên tâm."
+      }
+    ]
   },
   "NewsSection": {
     "content": {

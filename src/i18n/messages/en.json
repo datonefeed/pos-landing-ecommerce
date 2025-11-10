@@ -36,22 +36,22 @@
     },
     "features": [
       {
+        "id": "1",
         "step": "Feature 1",
         "title": "Smart Sales Management",
-        "content": "User-friendly cashier interface, fast order processing with automatic calculations and flexible promotion applications.",
-        "image": "/images/1pos-thumbnail_7.png"
+        "content": "User-friendly cashier interface, fast order processing with automatic calculations and flexible promotion applications."
       },
       {
+        "id": "2",
         "step": "Feature 2",
         "title": "Efficient Inventory Management",
-        "content": "Real-time inventory tracking, automatic low-stock alerts, and detailed import/export management with comprehensive reports.",
-        "image": "/images/1pos-thumbnail_10.jpg"
+        "content": "Real-time inventory tracking, automatic low-stock alerts, and detailed import/export management with comprehensive reports."
       },
       {
+        "id": "3",
         "step": "Feature 3",
         "title": "Revenue Reports and Analysis",
-        "content": "Intuitive dashboard with charts, real-time revenue reports, and detailed business trend analysis.",
-        "image": "/images/1pos-thumbnail_1.png"
+        "content": "Intuitive dashboard with charts, real-time revenue reports, and detailed business trend analysis."
       }
     ]
   },
@@ -131,24 +131,20 @@
     },
     "accordion": [
       {
-        "id": 1,
-        "title": "1POS Customer Support Assistant",
-        "imageUrl": "https://www.volantesystems.com/wp-content/uploads/2023/07/team-2.png"
+        "id": "1",
+        "title": "1POS Customer Support Assistant"
       },
       {
-        "id": 2,
-        "title": "Guide to Using Sales Features",
-        "imageUrl": "https://giaiphapmobifone.vn/wp-content/uploads/2024/07/1pos-post.png"
+        "id": "2",
+        "title": "Guide to Using Sales Features"
       },
       {
-        "id": 3,
-        "title": "Chatbot for Consultation & Quick Issue Resolution",
-        "imageUrl": "https://bimpos.com/sites/default/files/images/posts/960x0.jpg"
+        "id": "3",
+        "title": "Chatbot for Consultation & Quick Issue Resolution"
       },
       {
-        "id": 4,
-        "title": "Technical Support and Device Management",
-        "imageUrl": "https://www.vitalpos.com/images/vital-family.jpg"
+        "id": "4",
+        "title": "Technical Support and Device Management"
       }
     ],
     "form": {
@@ -171,7 +167,90 @@
     "content": {
       "title": "CUSTOMER REVIEWS",
       "description": "Thousands of businesses have trusted and used 1POS to manage their operations"
-    }
+    },
+    "cards": [
+      {
+        "id": 1,
+        "rating": 5,
+        "title": "Great solution for businesses",
+        "name": "Nguyen Van An",
+        "position": "Sales Director",
+        "company": "ABC Company",
+        "testimonial": "1POS has helped us optimize our sales and inventory management processes effectively. The interface is friendly and easy to use."
+      },
+      {
+        "id": 2,
+        "rating": 5,
+        "title": "Significant time savings",
+        "name": "Tran Thi Binh",
+        "position": "Store Owner",
+        "company": "XYZ Store",
+        "testimonial": "Managing multiple branches has never been easier. Detailed reports help me make accurate business decisions."
+      },
+      {
+        "id": 3,
+        "rating": 5,
+        "title": "Outstanding customer support",
+        "name": "Le Hoang Minh",
+        "position": "Store Manager",
+        "company": "DEF Retail Chain",
+        "testimonial": "The support team is very enthusiastic and professional. All issues are resolved quickly and effectively."
+      },
+      {
+        "id": 4,
+        "rating": 5,
+        "title": "Diverse and powerful features",
+        "name": "Pham Thu Ha",
+        "position": "CEO",
+        "company": "GHI Company",
+        "testimonial": "1POS provides all the features we need: from POS, inventory management, CRM to analytics reports. All in one platform."
+      },
+      {
+        "id": 5,
+        "rating": 5,
+        "title": "Significant revenue increase",
+        "name": "Hoang Van Khoa",
+        "position": "Marketing Director",
+        "company": "JKL Brand",
+        "testimonial": "After using 1POS, our revenue increased by 30%. The promotion and loyalty programs are very effective."
+      },
+      {
+        "id": 6,
+        "rating": 5,
+        "title": "Easily scalable",
+        "name": "Do Thi Mai",
+        "position": "Founder",
+        "company": "MNO Startup",
+        "testimonial": "Starting with a small store, we now have 5 branches. 1POS scales very well with our business growth."
+      },
+      {
+        "id": 7,
+        "rating": 5,
+        "title": "Accurate and detailed reporting",
+        "name": "Vu Duc Nam",
+        "position": "Chief Accountant",
+        "company": "PQR Corporation",
+        "testimonial": "The financial and business reporting system is very detailed. Reconciliation and monthly reporting now take just minutes."
+      },
+      {
+        "id": 8,
+        "rating": 5,
+        "title": "Perfect multi-channel integration",
+        "name": "Bui Thi Lan",
+        "position": "Operations Manager",
+        "company": "STU E-commerce",
+        "testimonial": "Connecting the website, app, and offline stores in one system. Managing multi-channel orders has never been easier."
+      },
+      {
+        "id": 9,
+        "rating": 5,
+        "title": "Reliable and stable",
+        "name": "Phan Van Tung",
+        "position": "CTO",
+        "company": "VWX Technology",
+        "testimonial": "The system runs very stably, with no issues during peak hours. Data security is absolute, giving us complete peace of mind."
+      }
+    ]
   },
   "NewsSection": {
     "content": {
